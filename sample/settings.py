@@ -21,12 +21,19 @@ TEMPLATES=os.path.join(BASE_DIR,'templates')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n+u*^j=&6c%p-qwm2_&yc1@1gxy8^@4=eoht)8e2$u$9+g5ork'
+"""SECRET_KEY = 'n+u*^j=&6c%p-qwm2_&yc1@1gxy8^@4=eoht)8e2$u$9+g5ork'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True"""
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+6k3q+pmu45%asj6yjpkag')
 
-ALLOWED_HOSTS = []
+# SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+
+# Set hosts to allow any app on Heroku and the local testing URL
+ALLOWED_HOSTS = ['sampleprogrammingtech.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
