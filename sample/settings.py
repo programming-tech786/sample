@@ -29,12 +29,9 @@ import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+6k3q+pmu45%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = False
 
-# Set hosts to allow any app on Heroku and the local testing URL
-ALLOWED_HOSTS = ['https://sampleprogrammingtech.herokuapp.com/','127.0.0.1']
-
+ALLOWED_HOSTS = ['https://sampleprogrammingtech.herokuapp.com/','https://git.heroku.com/sampleprogrammingtech.git',]
 
 # Application definition
 
