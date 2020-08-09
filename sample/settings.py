@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["sampleprogrammingtech.herokuapp.com",'https://sampleprogrammingtech.herokuapp.com/','https://git.heroku.com/sampleprogrammingtech.git',]
+ALLOWED_HOSTS = ['https://sampleprogrammingtech.herokuapp.com/','https://git.heroku.com/sampleprogrammingtech.git',]
 
 # Application definition
 
